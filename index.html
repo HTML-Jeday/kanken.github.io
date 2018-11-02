@@ -1,0 +1,1153 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>new page</title>
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!--endbuild-->
+</head>
+
+<body>
+
+  <div class="modal-popup">
+    <div class="popup" id="call">
+      <form action="send.php" method="POST">
+        <div class="title">Заказ звонка</div>
+        <div class="description">Менеджер перезвонит Вам в ближайшее время</div>
+        <input type="text" placeholder="Ваше имя" name="name" required>
+        <input type="text" placeholder="Ваш телефон" name="phone" required pattern="+[0-9]">  
+        <button class="button">Заказать звонок</button>
+        <div class="personal-data">
+          <input type="checkbox" checked="checked">
+          <label for="">Согласие на обработку персональных данных</label>
+        </div>
+      </form>
+    </div> 
+     <div class="popup" id="view">
+        <form action="send.php" method="POST">
+          <div class="title">Оставить отзыв</div>
+          <textarea   rows="5" cols="20" name="view" placeholder="Ваш отзыв"></textarea>
+          <input type="text" placeholder="Ваше имя" name="name">
+          <input type="text" placeholder="Вы в соцсетях" name="social">  
+          <button class="button">Оставить отзыв</button>
+          <div class="personal-data">
+            <input type="checkbox" checked="checked">
+            <label for="">Согласие на обработку персональных данных</label>
+          </div>
+        </form>
+      </div>
+      <div class="popup" id="buy-by-one">
+          <form action="send.php" method="POST">
+            <div class="title">Купить в один клик</div>
+            
+            <input type="text" placeholder="Ваше имя" name="name" required>
+            <input type="text" placeholder="Ваш телефон" name="phone" required pattern="+[0-9]">
+            <input type="text" placeholder="Ваш email" name="email" required pattern="\S+@[a-z]+.[a-z]+">  
+            <textarea   rows="5" cols="20" name="adress" placeholder="Адресс доставки"></textarea>
+            <button class="button order-buy-one-click">Оставить отзыв</button>
+            <input type="text" name="productname" class="hidden-input">
+            <div class="personal-data">
+              <input type="checkbox" checked="checked">
+              <label for="">Согласие на обработку персональных данных</label>
+            </div>
+          </form>
+        </div>
+    <div class="overlay"></div>
+  </div>
+  <!-- header begin -->
+  <div class="hiden-mobile-nav"></div>
+  <div class="mobile-container-menu"><img src="images/mMenu.png" alt=""></div>
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6  col-4 d-flex">
+          <h1 class="logo">
+            <a href="/">
+              <img src="images/logo.png" alt="">
+            </a>
+          </h1>
+        </div>
+        <div class="col-md-5 col-sm-6 col-8 d-flex">
+          <div class="order-callback">
+            <div class="callback" id="open-modal-call">
+              <a href="#">Заказать обратный <span class="tablet-zvonok">звонок</span></a>
+            </div>
+            <div class="phone">
+                <a href="tel:+74994040394">+7(499) 404 03 94</a>
+            </div>
+          </div>
+          <div class="mMenu"><img src="images/mobile-menu.png" alt=""></div>
+          
+          
+        </div>
+        <div class="col-md-1  ">
+          <a >
+              <div class="basket">
+                  <img src="images/basket.png" alt="">
+                  <span class="basket-counter"></span>
+                </div>
+          </a>
+          
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+  <!-- section-brand begin -->
+  <section class="section-brand">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <div class="content-container">
+            <h2 class="title">
+              <p>Легендарный</p>
+              <p> шведский бренд</p>
+              <p> уже рядом</p>
+            </h2>
+            <div class="description">Получай удовольствие <br>
+              вместе с Kånken со скидкой -40% </div>
+            <a href="#tab-category" class="button">Заказать прямо сейчас</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- section-brand end -->
+  <!-- section-icons begin -->
+  <div class="section-icons">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-4 col-sm-6 ">
+          <div class="item">
+            <div class="img-container">
+              <img src="images/truck.png" alt="">
+            </div>
+            <div class="content-container">
+              Бесплатная доставка по России
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-6">
+          <div class="item">
+            <div class="img-container">
+              <img src="images/return.png" alt="">
+            </div>
+            <div class="content-container">
+              Гарантия возврата <br> в течение 14 дней
+            </div>
+          </div>
+        </div>
+        <div class="col-md-4 col-sm-12 ">
+          <div class="item">
+            <div class="img-container">
+              <img src="images/money.png" alt="">
+            </div>
+            <div class="content-container">
+              Оплата наличными <br> и Visa/MasterCard
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section-icons end -->
+
+  <!-- section way begin -->
+  <div class="section-way">
+    <div class="container">
+      <div class="row">
+        <div class="content-container">
+          <h3 class="title">Лучшее решение, где бы Вы ни оказались</h3>
+          <div class="content">
+            <p>Рюкзак произвел фурор в индустрии товаров для туризма
+              и продолжал развиваться, радуя поклонников бренда
+              новыми изобретениями.</p>
+
+            <p> Классический рюкзак Kanken был разработан в 1978 году.
+              За время своего существования он завоевал популярность
+              среди шведских школьников, а также студентов,
+              современной молодежи и путешественников со всего мира.
+              И сегодня Kanken продолжает занимать достойное место в
+              списке самых желанных приобретений</p>
+
+            <p>
+              Каждый рюкзак бренда Fjallraven – олицетворение
+              минимализма,комфорта и стиля. Kanken обладает
+              разнообразной цветовой палитрой (в коллекции более
+              30 расцветок), удобством и устойчивостью к износу.
+
+            </p>
+            <p>
+              Где бы вы ни оказались: на природе, в длительном
+              путешествии, городской прогулке - высококачествен-
+              ный рюкзак Kanken станет незаменимым помощником
+              в любой ситуации.
+            </p>
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section way eng -->
+
+  <!-- section backpack -->
+  <div class="section-backpack">
+    <div class="container">
+      <div class="row">
+        <div class="wrapper">
+          <div class="content-container">
+            <h4 class="title">
+              Индивидуальность Kanken - в мелочах
+            </h4>
+            <div class="content">
+              <div class="question-item">
+                <div class="question">Рюкзак или сумка?</div>
+                <img src="images/circle-1.jpg" alt="">
+                <div class="answer">Удобные ручки и лямки - носите как рюкзак и как сумку.</div>
+              </div>
+              <div class="question-item">
+                <div class="question">Конструкцияя молнии</div>
+                <img src="images/circle-2.jpg" alt="">
+                <div class="answer">Благодаря длинной молнии, которая позволяет открывать рюкзак практически полностью,
+                  а это значит, что использовать вещи в Вашем рюкзаке еще никогда не было так просто.</div>
+              </div>
+              <div class="question-item">
+                <div class="question">Рюкзак на века</div>
+                <img src="images/circle-3.jpg" alt="">
+                <div class="answer">Материал обладает водонепроницаемостью, легкостью и прочностью. Благодаря материалу
+                  Vinylon F, разработанный брендом Fjallraven, не доставляет особых хлопот в уходе за рюкзаком.
+                  Благодаря ему вы можете обнаружить, что ваш Kanken, купленный еще в школьные годы, без проблем
+                  пережил университет и несколько лет бурных путешествий.</div>
+              </div>
+              <div class="question-item">
+                <div class="question">Маленький секрет</div>
+                <img src="images/circle-4.jpg" alt="">
+                <div class="answer">Во внутреннем кармане главного отделения лежит прямоугольная виниловая подкладка в
+                  несколько сантиметров толщины. Она не пропускает влагу и холод, позволяет сидеть везде, где вы
+                  захотите и защищает ваш ноутбук от случайных повреждений.</div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- section backpack -->
+
+  <!-- section-rotate begin -->
+  <div class="section-rotate">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-12">
+          <h5 class="title">Посмотрите на Ваш Kanken со всех сторон в 360°</h5>
+        </div>
+        <div class="col-md-6 col-sm-12">
+          <div class="slider">
+            <img src="images/slides/slide_1.jpg" id="imgg" alt="">
+            <div id="rangebar"></div>
+          </div>
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- section-rotate end -->
+
+
+  <!-- section choise begin -->
+  <div class="section-choise">
+    <div class="choise-container">
+      <div class="container">
+        <div class="row">
+          <div class="choise-grid-second">
+            <img src="images/choise-1.png" alt="">
+            <img src="images/choise-2.png" alt="">
+            <img src="images/choise-3.png" alt="">
+            <img src="images/choise-4.png" alt="">
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container">
+      <div class="row">
+        <div class="choise-grid">
+          <div class="image-item">
+            <img src="images/choise-1.png" alt="">
+            <a class="description">Каждый день</a>
+          </div>
+          <div class="image-item">
+            <img src="images/choise-2.png" alt="">
+            <a class="description">Для учебы</a>
+          </div>
+          <div class="image-item">
+            <img src="images/choise-3.png" alt="">
+            <a class="description">Для поездок</a>
+          </div>
+          <div class="image-item">
+            <img src="images/choise-4.png" alt="">
+            <a class="description">Для детей</a>
+          </div>
+        </div>
+
+      </div>
+      <div class="row">
+        <div class="size-grid">
+          <div class="col-md-3 col-sm-12">
+            <div class="size-item">
+              <img src="images/1mini.jpg" class="img" alt="">
+              <p class="size-name">Mini</p>
+              <a href="#tab-category" class="button-choise button-choise-mini">Выбрать рюкзак</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <div class="size-item">
+              <img src="images/1classic.jpg" class="img" alt="">
+              <p class="size-name">Classic</p>
+              <a href="#tab-category"  class="button-choise button-choise-classic">Выбрать рюкзак</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <div class="size-item">
+              <img src="images/1big.jpg" class="img" alt="">
+              <p class="size-name">Big</p>
+              <a href="#tab-category"  class="button-choise button-choise-big">Выбрать рюкзак</a>
+            </div>
+          </div>
+          <div class="col-md-3 col-sm-12">
+            <div class="size-item">
+              <img src="images/1no2.jpg" class="img" alt="">
+              <p class="size-name">No. 2</p>
+              <a href="#tab-category"  class="button-choise button-choise-no2">Выбрать рюкзак</a>
+            </div>
+          </div>
+
+
+
+
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section choise end -->
+
+  <!-- section solution begin -->
+  <div class="section-solution">
+    <div class="container">
+      <div class="row">
+        <div class="content-container">
+          <h3 class="title">Лучшее решение, где бы Вы ни оказались
+          </h3>
+          <div class="content">
+            <p>Kanken прекрасным образом сочетается как с повседневным гардеробом, так и со спортивным стилем, который
+              предпочитают любители активного образа жизни. Где бы вы ни оказались: на природе, в длительном
+              путешествии, городской прогулке или на светском мероприятии - высококачественный рюкзак Kanken станет
+              незаменимым помощником в любой ситуации.</p>
+            <div class="paragraph-item">
+              <div class="title">Всё необходимое - всегда с Вами</div>
+              <div class="content">По внешнему виду Шведские рюкзаки выглядят стильно, эстетично, практично. Kanken не
+                выглядит громоздким и перегруженным, но вмещает в себя огромное количество повседневных необходимых
+                вещей - учебники, ноутбук одежду и вещи для тренировок.</div>
+            </div>
+            <div class="paragraph-item">
+              <div class="title">Невероятно удобные карманы</div>
+              <div class="content">При всей своей простоте, рюкзаки обеспечены достаточным числом отделений. Рюкзак
+                имеет вместительное основное отделение, накладной карман спереди и дополнительные по бокам для хранения
+                разнообразных мелочей.</div>
+            </div>
+            <div class="paragraph-item">
+              <div class="title">Kanken - это безопасность</div>
+              <div class="content">С ним вы всегда будете заметны на дорогах во время пеших и велосипедных прогулок
+                благодаря светоотражающему логотипу на поверхности.</div>
+            </div>
+            <div class="paragraph-item">
+              <div class="title">Невероятно лёгкий</div>
+              <div class="content">Масса всего 300 грамм. Это один из самых легких рюкзаков в мире!</div>
+            </div>
+
+
+
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section solution end -->
+
+  <!-- section-discount begin -->
+  <div class="section-discount">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-7">
+          <h5 class="title">Все эти прекрасные технологии со скидкой
+            в 40% <br> до конца месяца!</h5>
+        </div>
+        <div class="col-md-5">
+          <form action="send.php" method="POST">
+            <input type="text" placeholder="Ваш телефон" name="phone" required pattern="+[0-9]">
+            <button>Заказать звонок</button>
+            <div class="checkbox">
+              <input type="checkbox" checked="checked">
+              <label for="">Согласие на обработку данных</label>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section-discount end -->
+
+  <!-- section picker begin -->
+  <div class="section-picker">
+    <div class="picker-top">
+      <div class="container">
+        <div class="row">
+          <div class="picker-top__title">
+            <p>Выберите модель Kanken:</p>
+          </div>
+          <div class="picker-top__tabs-container">
+            <li class="active tab-mini">
+              <div class="tab-img"><img src="images/tabs/mini-tab.png" alt=""></div>
+              <div class="tab-title ">Mini</div>
+            </li>
+            <li class="tab-classic">
+              <div class="tab-img"><img src="images/tabs/classic-tab.png" alt=""></div>
+              <div class="tab-title ">Classic</div>
+            </li>
+            <li class="tab-big">
+              <div class="tab-img"><img src="images/tabs/big-tab.png" alt=""></div>
+              <div class="tab-title ">Big</div>
+            </li>
+            <li class="tab-no2">
+              <div class="tab-img"><img src="images/tabs/no2-tab.png" alt=""></div>
+              <div class="tab-title">No. 2</div>
+            </li>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="picker-content" id="tab-category">
+      <div class="container">
+        <div class="row">
+          <!-- tab -->
+          <div class="tab-content active tab-active">
+            <div class="backpack-wrapper">
+              <div class="backpack-container">
+                <div class="img-container">
+                  <img src="images/tabs/picker-color/Mini/12.jpg" alt="">
+                </div>
+                <div class="info-container">
+                  <li><span>Материал:</span>полиэстер</li>
+                  <li><span>Вес:</span>175 гр</li>
+                  <li><span>Глубина:</span>13 см</li>
+                  <li><span>Высота:</span>29 см</li>
+                  <li><span>Ширина:</span>20 см</li>
+                  <li><span>Объём:</span>7 л</li>
+                  <li><span>Карман:</span>1 спереди, 2 сбоку</li>
+                </div>
+              </div>
+              <div class="picker-container">
+                <div class="picker-title">Kanken Mini</div>
+                <div class="picker-color">Выберите цвет:<span id="pickedColorName">Pink</span></div>
+                <div class="picker-palette">
+                  <div class="color-palette">
+                    <label data-color="#f384b4" data-name="Pink" data-number="12">
+                      <input type="radio" class="radio" checked="checked" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#0075c3" data-name="UN Blue" data-number="20">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-bg="royalblueoxred.png" data-name="Royal Blue/Ox Red" data-number="24">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+
+                    <label data-color="#9cbbc0" data-name="Sky Blue" data-number="18">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-bg="frostgreenpeachpink.png" data-name="Frost Green/Peach Pink" data-number="40">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#363137" data-name="Graphite" data-number="2">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#fa6780" data-name="Peach Pink" data-number="13">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#9f0021" data-name="Ox Red" data-number="15">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#1061b4" data-name="Royal Blue" data-number="23">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#df7351" data-name="Brick" data-number="6">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#000000" data-name="Black" data-number="26">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-bg="blackoxred.png" data-name="Black/Ox Red" data-number="27">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-bg="navywarmyellow.png" data-name="Navy/Warm Yellow" data-number="29">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-bg="oxredroyalblue.png" data-name="Ox Red/Royal Blue" data-number="16">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#2c004f" data-name="Purple" data-number="30">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#4c6d51" data-name="Forest Green" data-number="38">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#becac6" data-name="Frost Green" data-number="39">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#e8bd00" data-name="Warm Yellow" data-number="4">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#9f9d92" data-name="Fog" data-number="1">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+
+                  </div>
+                </div>
+                <div class="picker-price"><span>3500 <i class="fa fa-rub" aria-hidden="true"></i></span> <sup>6500</sup></div>
+                <div class="picker-discount">Скидка<span> - 40 %</span>до конца месяца Вы экономите <span>2 467 руб.</span></div>
+                <div class="picker-buttons">
+                  <button class="add-to-cart button">Добавить в корзину</button>
+                  <button class="buy-by-one button open" id="open-modal-buy">Купить в один клик</button>
+                </div>
+
+              </div>
+            </div>
+            <p class="description">
+              Fjallraven Kanken Mini – рюкзак, отличающийся более легким весом и компактными габаритами.
+              Он идеально подходят для девушек, а также самых маленьких покупателей.
+            </p>
+          </div>
+          <!-- tab -->
+          <!-- tab -->
+          <div class="tab-content">
+            <div class="backpack-wrapper">
+              <div class="backpack-container">
+                <div class="img-container">
+                  <img src="images/tabs/picker-color/Classic/12.jpg" alt="">
+                </div>
+                <div class="info-container">
+                  <li><span>Материал:</span>полиэстер</li>
+                  <li><span>Вес:</span>290 гр</li>
+                  <li><span>Глубина:</span>13 см</li>
+                  <li><span>Высота:</span>38 см</li>
+                  <li><span>Ширина:</span>27 см</li>
+                  <li><span>Объём:</span>16 л</li>
+                  <li><span>Карман:</span>1 спереди, 2 сбоку</li>
+                </div>
+              </div>
+              <div class="picker-container">
+                <div class="picker-title">Kanken Classic</div>
+                <div class="picker-color">Выберите цвет:<span id="pickedColorName">Pink</span></div>
+                <div class="picker-palette">
+                  <div class="color-palette">
+                    <label data-color="#f384b4" data-name="Pink" data-number="12">
+                      <input type="radio" class="radio" checked="checked" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#0075c3" data-name="UN Blue" data-number="20">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-bg="royalblueoxred.png" data-name="Royal Blue/Ox Red" data-number="24">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+
+                    <label data-color="#9cbbc0" data-name="Sky Blue" data-number="18">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-bg="frostgreenpeachpink.png" data-name="Frost Green/Peach Pink" data-number="40">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#363137" data-name="Graphite" data-number="2">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-bg="forestgreenoxred.png" data-name="Forest Green/Ox Red" data-number="38">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#fa6780" data-name="Peach Pink" data-number="13">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#9f0021" data-name="Ox Red" data-number="15">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#1061b4" data-name="Royal Blue" data-number="23">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#df7351" data-name="Brick" data-number="6">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#000000" data-name="Black" data-number="26">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-bg="blackoxred.png" data-name="Black/Ox Red" data-number="27">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-bg="navywarmyellow.png" data-name="Navy/Warm Yellow" data-number="29">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-bg="oxredroyalblue.png" data-name="Ox Red/Royal Blue" data-number="16">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#2c004f" data-name="Purple" data-number="30">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#4c6d51" data-name="Forest Green" data-number="35">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#becac6" data-name="Frost Green" data-number="39">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#e8bd00" data-name="Warm Yellow" data-number="4">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#9f9d92" data-name="Fog" data-number="1">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+
+
+
+                  </div>
+                </div>
+                <div class="picker-price"><span>3900 <i class="fa fa-rub" aria-hidden="true"></i></span> <sup>6500</sup></div>
+                <div class="picker-discount">Скидка<span> - 40 %</span>до конца месяца Вы экономите <span>2 600 руб.</span></div>
+                <div class="picker-buttons">
+                  <button class="add-to-cart button">Добавить в корзину</button>
+                  <button class="buy-by-one button open" id="open-modal-buy">Купить в один клик</button>
+                  
+                </div>
+
+              </div>
+            </div>
+            <p class="description">
+              Fjallraven Kanken Classic - настоящая классика. Компактный и вместительный.
+              Всегда приятно приобщаться к классике, тем более, когда это практичный, водонепроницаемый нестареющий
+              Fjallraven Kanken.
+            </p>
+          </div>
+          <!-- tab -->
+          <!-- tab -->
+          <div class="tab-content">
+            <div class="backpack-wrapper">
+              <div class="backpack-container">
+                <div class="img-container">
+                  <img src="images/tabs/picker-color/Big/2.jpg" alt="">
+                </div>
+                <div class="info-container">
+                  <li><span>Материал:</span>полиэстер</li>
+                  <li><span>Вес:</span>350 гр</li>
+                  <li><span>Глубина:</span>13 см</li>
+                  <li><span>Высота:</span>41 см</li>
+                  <li><span>Ширина:</span>32 см</li>
+                  <li><span>Объём:</span>20 л</li>
+                  <li><span>Карман:</span>1 спереди, 2 сзади</li>
+                </div>
+              </div>
+              <div class="picker-container">
+                <div class="picker-title">Kanken Big</div>
+                <div class="picker-color">Выберите цвет:<span id="pickedColorName">Graphite</span></div>
+                <div class="picker-palette">
+                  <div class="color-palette">
+                    <label data-color="#363137" data-name="Graphite" data-number="2">
+                      <input type="radio" class="radio" name="color" checked="checked">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#9f0021" data-name="Ox Red" data-number="6">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#1061b4" data-name="Royal Blue" data-number="7">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#000000" data-name="Black" data-number="8">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#2c004f" data-name="Purple" data-number="9">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#4c6d51" data-name="Forest Green" data-number="10">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#9f9d92" data-name="Fog" data-number="1">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+
+                  </div>
+                </div>
+                <div class="picker-price"><span>5040 <i class="fa fa-rub" aria-hidden="true"></i></span> <sup>8400</sup></div>
+                <div class="picker-discount">Скидка<span> - 40 %</span>до конца месяца Вы экономите <span>3 360 руб.</span></div>
+                <div class="picker-buttons">
+                  <button class="add-to-cart button">Добавить в корзину</button>
+                  <button class="buy-by-one button open" id="open-modal-buy">Купить в один клик</button>
+                  
+                </div>
+
+              </div>
+            </div>
+            <p class="description">
+              Fjallraven Kanken Big - классический рюкзак Kanken, но больше. Во всём.
+              Идеально подойдет для походов и путешествий. Возможность вместить всё, что Вы захотите взять с собой.
+            </p>
+          </div>
+          <!-- tab -->
+          <!-- tab -->
+          <div class="tab-content">
+            <div class="backpack-wrapper">
+              <div class="backpack-container">
+                <div class="img-container">
+                  <img src="images/tabs/picker-color/No. 2/2.jpg" alt="">
+                </div>
+                <div class="info-container">
+                  <li><span>Материал:</span>G-1000 HeavyDuty: 65% полиэстер, 35% хлопок </li>
+                  <li><span>Вес:</span>550 гр</li>
+                  <li><span>Глубина:</span>13 см</li>
+                  <li><span>Высота:</span>38 см</li>
+                  <li><span>Ширина:</span>27 см</li>
+                  <li><span>Объём:</span>16 л</li>
+                  <li><span>Карман:</span>1 спереди, 2 сзади</li>
+                </div>
+              </div>
+              <div class="picker-container">
+                <div class="picker-title">Kanken No. 2</div>
+                <div class="picker-color">Выберите цвет:<span id="pickedColorName">Deep Red</span></div>
+                <div class="picker-palette">
+                  <div class="color-palette">
+                    <label data-color="#ae002e" data-name="Deep Red" data-number="6">
+                      <input type="radio" class="radio" name="color" checked="checked">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#005a82" data-name="Lake Blue" data-number="2">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#7d6749" data-name="Sand" data-number="9">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#000000" data-name="Black" data-number="7">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+                    <label data-color="#00323f" data-name="Navy" data-number="8">
+                      <input type="radio" class="radio" name="color">
+                      <span class="radio-custom"></span>
+                    </label>
+
+
+
+                  </div>
+                </div>
+                <div class="picker-price"><span>4200 <i class="fa fa-rub" aria-hidden="true"></i></span> <sup>7000</sup></div>
+                <div class="picker-discount">Скидка<span> - 40 %</span>до конца месяца Вы экономите <span>2 800 руб.</span></div>
+                <div class="picker-buttons">
+                  <button class="add-to-cart button">Добавить в корзину</button>
+                  <button class="buy-by-one button open" id="open-modal-buy">Купить в один клик</button>
+                </div>
+
+              </div>
+            </div>
+            <p class="description">
+              Рюкзаки Kanken No. 2 со стильными кожаными ручками, вставками из кожи — прекрасная находка для тех, кто
+              предпочитает одеваться очень стильно и любит стильные аксессуары.
+            </p>
+          </div>
+          <!-- tab -->
+
+        </div>
+      </div>
+    </div>
+
+  </div>
+  <!-- section picker begin end -->
+  <!-- about us begin -->
+
+  <div class="about-us">
+    <div class="container">
+      <div class="row">
+        <div class="about-container">
+          <div class="title">о нас говорят</div>
+          <div class="description">Более 1000 довольных покупателей</div>
+          <div id="open-modal-view">
+              <a href="#" class="button" >Оставить отзыв</a>
+          </div>
+          
+        </div>
+        <div class="swiper-container">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="img-container">
+                  <img src="images/user.png" alt="">
+                </div>
+                <div class="content-container">
+                  <div class="name">Константин Морозов</div>
+                  <div class="content">Моя 5-летняя дочка очень любит яркий желтый цвет. Закомандовала: хочу яркий
+                    желтый
+                    рюкзак. Думала, его купить не проблема, а оказалось - еще какая. Сначала купили дешевый, на второй
+                    день он
+                    упал и запачкался. Еле отмыли, потом то нитки полезут, то швы разойдутся. И цвет уже не такой
+                    яркий...
+                    Выброшенные деньги. А тут случайно увидела Конкен Мини на сайте, показала ребенку и купила. Очень
+                    довольны.</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="img-container">
+                  <img src="images/user1.jpg" alt="">
+                </div>
+                <div class="content-container">
+                  <div class="name">Ирина Алексеенко</div>
+                  <div class="content">Долго выбирала мужу подарок. Не хотелось лишь бы что, а действительно полезную и стильную вещь. Посмотрела на его рюкзак и поняла, что надо менять это китайское убожество. Случайно увидела черный Конкен и поняла, что это самое оно. Цена за такое качество более чем приемлемая. Смотрится ну очень дорого. Доставили в тот же день. Большое спасибо!</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="img-container">
+                  <img src="images/user2.jpg" alt="">
+                </div>
+                <div class="content-container">
+                  <div class="name">Марина Коваленко</div>
+                  <div class="content">У меня две девочки-близняшки, поэтому нагрузка на семейный бюджет двойная. Они просят, что бы вещи им покупали одинаковые. Одежду и обувь такую можно еще найти, а вот с рюкзаками и сумками сложновато. Да и стоят они недешево. Каждые 2-3 месяца выбрасывать двойную сумму накладно. Случайно нашла рюкзаки Конкен Мини в интернете, а тут акция - 50% на второй такой же. Ой, спасибо, порадовали и доставили очень быстро. Я буду всем знакомым советовать.</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="img-container">
+                  <img src="images/user3.jpg" alt="">
+                </div>
+                <div class="content-container">
+                  <div class="name">Игорь Назаров</div>
+                  <div class="content">Я каждые выходные с друзьями хожу в походы или стараюсь совершать велосипедные прогулки. С собой надо брать вещи, нужно, чтобы руки были свободны, поэтому без хорошего рюкзака никак. Много слышал о Конкен, но думал в России их не продают. Увидел Макси и сразу заказал. Доставили прямо в офис на следующий день. Жалко, я сначала хотел красный или бордовый, но именно этой модели в таком цвете не было. Купил синий. Тоже доволен.</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="img-container">
+                  <img src="images/user4.jpg" alt="">
+                </div>
+                <div class="content-container">
+                  <div class="name">Александр Бойчук</div>
+                  <div class="content">Я - фотограф-дизайнер, много путешествую, делаю интересные снимки, а потом обрабатываю фотографии, поэтому камера и ноутбук всегда при мне. Друзья на день рождения подарили рюкзак Конкен Биг. Мне очень понравился. Помещается все. Жена увидела и тоже захотела. Заказал ей на этом сайте такой же, только бордовый. Очень хорошее качество, рекомендую.</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="img-container">
+                  <img src="images/user5.jpg" alt="">
+                </div>
+                <div class="content-container">
+                  <div class="name">Наташа Климова</div>
+                  <div class="content">
+                      Перед началом учебного года была большая проблема купить подходящую сумку. Баул в школу как-то не хочется носить, а учебников и тетрадок много, еще и планшет надо брать с подзарядкой. Увидела рюкзак Конкен Мини у соседки. Очень красивый и стильный. Спросила, сколько стоит, и где она купила. Мама заказала и оплатила. Доставили быстро, именно тот, цвет, что я хотела. Мне очень нравится.
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="img-container">
+                  <img src="images/user6.jpg" alt="">
+                </div>
+                <div class="content-container">
+                  <div class="name">Алексей Вакуленко</div>
+                  <div class="content">
+                      Мне как программисту одного стационарного компьютера на работе мало. Беру с собой любимый ноут, а в транспорте читаю, а бывает и работаю на планшете. Нашел себе рюкзак, в котором можно носить и то, и другое. И не тяжело. Спасибо девушке-консультанту, что подобрала интересную расцветку и организовала быструю отправку. Уже рассказал всем друзьям об этом магазине.
+                    </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="img-container">
+                  <img src="images/user7.jpg" alt="">
+                </div>
+                <div class="content-container">
+                  <div class="name">Анна Новикова</div>
+                  <div class="content">Мы с бабушками и дедушками скинулись, подарили дочке на день рождения современный нотбук с диагональю 15 дюймов. Она ходит на английский язык и курсы дизайнеров, везде берет его с собой. Только с сумками и чехлами у нас не складывается. Они рвутся внутри и снаружи, протираются очень быстро. Вот и решили, что нужен качественный рюкзак - Конкен Лептоп 15. Светлый сначала боялись покупать - запачкается, не отстирается. Но цвет такой нежный и приятный, что рискнули. Не жалеем, качество отличное. Спасибо продавцу, что уговорил.</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="img-container">
+                  <img src="images/user8.jpg" alt="">
+                </div>
+                <div class="content-container">
+                  <div class="name">Виталий Сомов</div>
+                  <div class="content">Я занимаюсь продвижением сайтов на фрилансе. Больше работаю дома на диване, но иногда встречаюсь с клиентами в их офисе или на нейтральной территории - в кафе. Купил себе, чтобы носить с собой ноут, рюкзак Конкен Лептоп 13. Очень удобно, недорого и хорошо выглядит. Судя по качественному материалу и добротному изготовлению прослужит долго. Спасибо консультанту за оперативно обработанный заказ и быструю доставку. Теперь знаю, что подарю своей девушке.</div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="img-container">
+                  <img src="images/user9.jpg" alt="">
+                </div>
+                <div class="content-container">
+                  <div class="name">Олег Сухенко</div>
+                  <div class="content">
+                      Нам на работе очень долго не могли установить современные компьютеры. Приходилось составлять отчеты на мониторах-трубках. К вечеру глаза от них лезли на лоб. Решил носить ноутбук. Коллега посоветовал купить рюкзак Конкен, он уже давно с таким ходит, показал, где делал заказ. Спасибо и моему сотруднику, и этому интернет-магазину. Теперь мой ноут всегда при мне.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="img-container">
+                  <img src="images/user10.jpg" alt="">
+                </div>
+                <div class="content-container">
+                  <div class="name">Таня Сотникова</div>
+                  <div class="content">
+                      Учусь в универе, заканчиваю 2-й курс, буду юристом. Очень много времени приходится просиживать в библиотеке, потому что нет этих материалов в интернете. Эти книги не дают домой. А ксероксы и сканы будут золотые. Мама спросила, что подарить мне на день рождения, я попросила рюкзак для лептопа 15 дюймов. Сама нашла Конкен на сайте, заказала. Быстро доставили. Цвет понравился. Вообще, он темнее, чем на картинке, но меня устраивает. Спасибо.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="img-container">
+                  <img src="images/user11.jpg" alt="">
+                </div>
+                <div class="content-container">
+                  <div class="name">Юрий Петренко</div>
+                  <div class="content">
+                      Заказывал рюкзак для сына-первоклассника Конкен Ноу. Его младший брат увидел на мониторе и тоже захотел. Так я ему заодно и Конкен Мини по акции взял с 50% скидкой. Спасибо консультанту, что подсказал. Рекомендую всем папам, мамам и деткам. Мои в восторге.
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+              <div class="slider">
+                <div class="img-container">
+                  <img src="images/user12.jpg" alt="">
+                </div>
+                <div class="content-container">
+                  <div class="name">Саша Кольцов</div>
+                  <div class="content">
+                      У нас в экономическом техникуме с этого года требуют, чтобы мы конспекты делали не в тетрадях, а на ноуте. Вот и ношу его на все пары. Пришлось даже рюкзак специальный купить, как у многих одногрупников. Они заказывали здесь и я тоже. Для моего компа с диагональю 13 даже специальную модель консультант нашла. Доставили через день. Вот это сервис. Просто супер.
+
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="swiper-slide">
+                <div class="slider">
+                  <div class="img-container">
+                    <img src="images/user13.jpg" alt="">
+                  </div>
+                  <div class="content-container">
+                    <div class="name">Яна Медведева</div>
+                    <div class="content">
+
+                        Часто езжу в командировки, поэтому кроме чемодана купила для моего ноутбука специальный рюкзак Конкен Лептоп 15. Покупкой и сервисом очень довольна. Доставили быстро. Качество хорошее. Буду обращаться еще в этот интернет-магазин и всем рекомендую.
+                    </div>
+                  </div>
+                </div>
+              </div>
+          </div>
+          <!-- Add Arrows -->
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- about us end -->
+  <!-- section-steps begin -->
+  <div class="section-steps">
+    <div class="container">
+      <div class="row">
+        <div class="content-container">
+          <div class="title">От заявки до рюкзака в 3 простых шага</div>
+          <div class="steps-container">
+            <div class="step-item">
+              <div class="step-title">01. Заявка или звонок</div>
+              <div class="step-content">Просто оставьте заявку или сделайте звонок. Дальше будем действовать мы.</div>
+              <div id="open-modal-call">
+                  <a href="#" class="button" >Заказать звонок</a>
+              </div>
+              
+            </div>
+            <div class="step-item">
+              <div class="step-title">02. Бесплатная доставка</div>
+              <div class="step-content">Мы бесплатно отправляем Вам наш рюкзак удобным для Вас способом.</div>
+            </div>
+            <div class="step-item">
+              <div class="step-title">03. Получение и оплата</div>
+              <div class="step-content">Дело за малым! Получите Ваш рюкзак и оплатите посылку.</div>
+            </div>
+          </div>
+        </div>
+
+      </div>
+    </div>
+  </div>
+  <!-- section-steps end -->
+
+  <!-- section-gallery begin -->
+  <div class="section-gallery">
+    <div class="container">
+      <div class="row">
+
+        <div class="grid-slider">
+          <div class="grid-slide">
+            <div class="grid-row">
+              <img src="images/gallery1.jpg" alt="">
+              <img src="images/gallery2.jpg" alt="">
+              <img src="images/gallery3.jpg" alt="">
+            </div>
+            <div class="grid-row">
+              <img src="images/gallery4.jpg" alt="">
+              <img src="images/gallery5.jpg" alt="">
+              <img src="images/gallery6.jpg" alt="">
+            </div>
+          </div>
+          <div class="grid-slide">
+            <div class="grid-row">
+              <img src="images/gallery1.jpg" alt="">
+              <img src="images/gallery2.jpg" alt="">
+              <img src="images/gallery3.jpg" alt="">
+            </div>
+            <div class="grid-row">
+              <img src="images/gallery4.jpg" alt="">
+              <img src="images/gallery5.jpg" alt="">
+              <img src="images/gallery6.jpg" alt="">
+            </div>
+          </div>
+        </div>
+
+
+      </div>
+    </div>
+  </div>
+  <!-- section-gallery end -->
+
+  <!-- section-any-question begin -->
+  <div class="section-any-question">
+    <div class="container">
+      <div class="row map-mobile">
+        <h6>Бесплатная доставка по всему СНГ</h6>
+      </div>
+      <div class="row flex-column ">
+        <form class="form" method="POST" action="send.php">
+          <div class="description-form">У Вас остались вопросы? Задайте их нам прямо сейчас</div>
+          <div class="form-container">
+            <textarea placeholder="Ваш вопрос"></textarea>
+            <input type="text" placeholder="Ваше имя" name="name" required>
+            <input type="text" placeholder="Ваш телефон" name="phone" required pattern="+[0-9]">
+            <button class="button">Отправить вопрос</button>
+            <div class="personal-data">
+              <input type="checkbox" checked="checked">
+              <label for="">Согласие на обработку персональных данных</label>
+            </div>
+
+          </div>
+        </form>
+        <div class="social">
+          <div class="title">Подписывайся на нас в социальны сетях:</div>
+          <div class="social-group">
+            <a href="https://vk.com" target="_blank">
+              <img src="images/vk-icon.png" alt="">
+            </a>
+            <a href="https://instagram.com" target="_blank">
+              <img src="images/insta.icon.png" alt="">
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  <!-- section-any-question end -->
+  <footer>
+    <div class="copyright">© 2017, "KANKEN"
+      <p>Политика конфиденциальности</p>
+    </div>
+  </footer>
+
+  <div class="scrollTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+
+  <script src="js/lib/jquery-3.1.1.min.js"></script>
+  <script src="js/lib/jquery-ui.min.js"></script>
+  <!-- <script src="js/lib/jquery.ui.touch-punch.min.js"></script> -->
+  <script src="js/lib/swiper.min.js"></script>
+  <script src="js/lib/slick.min.js"></script>
+  <!--build:js js/main.min.js -->
+  <script src="js/main.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>

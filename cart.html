@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <title>new page</title>
+  <meta name="description" content="">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+
+  <link rel="stylesheet" href="css/bootstrap.min.css">
+  <link rel="stylesheet" href="css/normalize.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="css/jquery-ui.css">
+  <link rel="stylesheet" href="css/swiper.min.css">
+  <link rel="stylesheet" href="css/slick.css">
+  <link rel="stylesheet" href="css/styles.css">
+
+  <!--endbuild-->
+</head>
+
+<body>
+
+    <div class="modal-popup">
+        <div class="popup" id="call">
+          <form action="send.php" method="POST">
+            <div class="title">Заказ звонка</div>
+            <div class="description">Менеджер перезвонит Вам в ближайшее время</div>
+            <input type="text" placeholder="Ваше имя" name="name" required>
+            <input type="text" placeholder="Ваш телефон" name="phone" required pattern="+[0-9]">  
+            <button class="button">Заказать звонок</button>
+            <div class="personal-data">
+              <input type="checkbox" checked="checked">
+              <label for="">Согласие на обработку персональных данных</label>
+            </div>
+          </form>
+        </div> 
+         <div class="popup" id="view">
+            <form action="send.php" method="POST">
+              <div class="title">Оставить отзыв</div>
+              <textarea   rows="5" cols="20" name="view" required>Ваш отзыв</textarea>
+              <input type="text" placeholder="Ваше имя" name="name" required>
+              <input type="text" placeholder="Вы в соцсетях" name="social" required>  
+              <button class="button">Оставить отзыв</button>
+              <div class="personal-data">
+                <input type="checkbox" checked="checked">
+                <label for="">Согласие на обработку персональных данных</label>
+              </div>
+            </form>
+          </div>
+          <div class="popup" id="buy-by-one">
+              <form action="send.php" method="POST">
+                <div class="title">Купить в один клик</div>
+                
+                <input type="text" placeholder="Ваше имя" name="name" required>
+                <input type="text" placeholder="Ваш телефон" name="phone" required pattern="+[0-9]">
+                <input type="text" placeholder="Ваш email" name="email" required pattern="\S+@[a-z]+.[a-z]+">  
+                <textarea   rows="5" cols="20" name="adress">Адресс доставки</textarea>
+                <button class="button">Оставить отзыв</button>
+                <div class="personal-data">
+                  <input type="checkbox" checked="checked">
+                  <label for="">Согласие на обработку персональных данных</label>
+                </div>
+              </form>
+            </div>
+        <div class="overlay"></div>
+      </div>
+
+  <!-- header begin -->
+  <div class="hiden-mobile-nav"></div>
+  <div class="mobile-container-menu"><img src="images/mMenu.png" alt=""></div>
+  <header class="header">
+    <div class="container">
+      <div class="row">
+        <div class="col-md-6 col-sm-6  col-4 d-flex">
+          <h1 class="logo">
+            <a href="index.html">
+              <img src="images/logo.png" alt="">
+            </a>
+          </h1>
+        </div>
+        <div class="col-md-5 col-sm-6 col-8 d-flex">
+          <div class="order-callback">
+            <div class="callback" id="open-modal-call">
+              <a href="#">Заказать обратный <span class="tablet-zvonok">звонок</span></a>
+            </div>
+            <div class="phone">
+              <a href="tel:+74994040394">+7(499) 404 03 94</a>
+            </div>
+          </div>
+          <div class="mMenu"><img src="images/mobile-menu.png" alt=""></div>
+          
+          
+        </div>
+        <div class="col-md-1  ">
+          <div class="basket">
+            <img src="images/basket.png" alt="">
+            <span class="basket-counter"></span>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+  <!-- header end -->
+  <!-- section-cart begin -->
+  <section class="section-cart">
+    <div class="container">
+      <div class="row">
+        <div class="col-sm-12">
+          <h1 class="cart-title">Список товаров в корзине</h1>
+          <form action="send.php" method="POST" id="cart-form">
+          <div class="cart-wrapper">
+            <div class="cart-top">
+                <li></li>
+              <li>Наименование</li>
+              <li>Цена</li>
+              <li>Количество</li>
+              <li>Стоимость</li>
+            </div>
+         
+            
+            <div class="cart-bottom">
+              <li>
+                <div>Товаров в корзине</div>
+                <div class="counter-cart">1</div>
+              </li>
+              <li>
+                <div>Итого к оплате: </div>
+                <div><span class="final-price">7800</span> руб</div>
+              </li>
+              <li>
+                <div>Итого к оплате: </div>
+                <div><span class="final-price">7800</span> руб</div>
+              </li>
+            </div>
+            <div class="cart-delete">
+              <li>
+               
+              </li>
+              <li>
+               
+              </li>
+              <li class="delete-li">
+               <a href="#" class="delete-all"><i class="fa fa-trash-o" aria-hidden="true"></i>Удалить все</a>
+              </li>
+            </div>
+          </div>
+
+          <div class="form-title">Заполните форму ниже, чтобы оформить заказ</div>
+    
+            <div class="form-wrapper">
+                <div class="input-field">
+                    <label for="">Ваше имя <span>*</span></label>
+                   <input type="text" name="name" required>
+                  </div>
+                  <div class="input-field">
+                     <label for="">Ваш телефон <span>*</span></label>
+                    <input type="text" name="phone" required pattern="+[0-9]">
+                   </div>
+                   <div class="input-field">
+                       <label for="">Ваш Email <span>*</span></label>
+                      <input type="text" name="email" required pattern="\S+@[a-z]+.[a-z]+">
+                     </div>
+                     <div class="input-field">
+                         <label for="">Адрес доставки <span>*</span></label>
+                        <textarea  cols="30" rows="10" name="adress" required></textarea>
+                       </div>
+                       <div class="input-field personal-data">
+                           <label for="">Согласие на обработку персональных данных <span>*</span></label>
+                          <input type="checkbox" checked="checked">
+                         </div>
+                         <input type="text" name="productname" class="hidden-input">
+
+                         <button class="button order-button">Оформить заказ</button>
+                      
+            </div>
+           
+          </form>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- section-cart end -->
+ 
+  <footer>
+    <div class="copyright">© 2017, "KANKEN"
+      <p>Политика конфиденциальности</p>
+    </div>
+  </footer>
+
+  <div class="scrollTop"><i class="fa fa-arrow-up" aria-hidden="true"></i></div>
+
+  <script src="js/lib/jquery-3.1.1.min.js"></script>
+  <script src="js/lib/jquery-ui.min.js"></script>
+  <script src="js/lib/jquery.ui.touch-punch.min.js"></script>
+  <script src="js/lib/swiper.min.js"></script>
+  <script src="js/lib/slick.min.js"></script>
+  <!--build:js js/main.min.js -->
+  <script src="js/main.js"></script>
+  <!-- endbuild -->
+</body>
+
+</html>
